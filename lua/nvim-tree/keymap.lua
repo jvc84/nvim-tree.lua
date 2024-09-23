@@ -35,7 +35,7 @@ function M.default_on_attach(bufnr)
   end
 
   -- BEGIN_DEFAULT_ON_ATTACH
-  vim.keymap.set('n', '<C-]>',   api.tree.change_root_to_node,        opts('CD'))
+  vim.keymap.set('n', '<Tab>',   api.tree.change_root_to_node,        opts('CD'))
   vim.keymap.set('n', '<C-e>',   api.node.open.replace_tree_buffer,   opts('Open: In Place'))
   vim.keymap.set('n', '<C-k>',   api.node.show_info_popup,            opts('Info'))
   vim.keymap.set('n', '<C-r>',   api.fs.rename_sub,                   opts('Rename: Omit Filename'))
@@ -44,7 +44,7 @@ function M.default_on_attach(bufnr)
   vim.keymap.set('n', '<C-x>',   api.node.open.horizontal,            opts('Open: Horizontal Split'))
   vim.keymap.set('n', '<BS>',    api.node.navigate.parent_close,      opts('Close Directory'))
   vim.keymap.set('n', '<CR>',    api.node.open.edit,                  opts('Open'))
-  vim.keymap.set('n', '<Tab>',   api.node.open.preview,               opts('Open Preview'))
+  vim.keymap.set('n', '<C-]>',   api.node.open.preview,               opts('Open Preview'))
   vim.keymap.set('n', '>',       api.node.navigate.sibling.next,      opts('Next Sibling'))
   vim.keymap.set('n', '<',       api.node.navigate.sibling.prev,      opts('Previous Sibling'))
   vim.keymap.set('n', '.',       api.node.run.cmd,                    opts('Run Command'))
